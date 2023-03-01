@@ -1,0 +1,55 @@
+.blog_detail {
+  padding: 50px 0;
+
+  p,
+  li {
+    color: $slider_dot_color;
+    line-height: 2;
+    list-style-type: disc;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  strong {
+    font-size: 22px;
+    color: #000;
+  }
+}
+.enquiry_form {
+  padding: 50px 0;
+
+  .form_title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $primary_color;
+    span {
+      color: $primary_color;
+    }
+    h3 {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  label {
+    display: block;
+    font-weight: 300;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $slider_dot_color;
+    background-color: $background_color;
+    padding: 8px 10px;
+  }
+  button {
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: $primary_color;
+    padding: 8px 50px;
+    border-radius: 20px;
+    color: $white;
+    margin-top: 30px;
+  }
+}

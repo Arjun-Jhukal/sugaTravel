@@ -1,0 +1,27 @@
+.blog {
+  padding: 50px 0;
+
+  &_item {
+    position: relative;
+    margin-bottom: 60px;
+
+    img {
+      width: 100%;
+      min-height: 250px;
+      object-fit: cover;
+    }
+
+    .title {
+      background-color: $blog_title_background;
+      position: absolute;
+      right: 0;
+      bottom: -35px;
+      left: 50px;
+      padding: 15px;
+      color: $white;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+}

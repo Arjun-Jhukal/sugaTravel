@@ -1,0 +1,61 @@
+.slider {
+  overflow: hidden;
+
+  &_item {
+    position: relative;
+
+    &_image {
+      img {
+        width: 100%;
+        height: 70vh;
+      }
+    }
+  }
+  &_info {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    background-color: #22222246;
+
+    h1 {
+      font-size: 60px;
+      color: $white;
+    }
+    a {
+      font-size: 18px;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline-block;
+      padding: 5px 15px;
+      border: 2px solid $white;
+      border-radius: 10px;
+      background-color: #22222246;
+      @include transition_ease;
+
+      &:hover {
+        background-color: $white;
+        color: $primary_color;
+      }
+    }
+  }
+
+  .slick-dots {
+    // background-color: $nav_background_color;
+    bottom: 10px;
+    right: 50px;
+    text-align: right;
+
+    li {
+      background-color: $slider_dot_color;
+      width: 50px;
+      height: 5px;
+      background-color: $slider_dot_color;
+
+      &.slick-active {
+        background-color: $primary_color;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.destination {
+  padding: 50px 0;
+  background: url(../img/background/);
+
+  &_item {
+    position: relative;
+    background: url(../img/company/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $bg_color1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #1a1b1c;
+      opacity: 0.3;
+      @include transition-ease;
+    }
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    &_title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      @include transition-ease;
+
+      h3 {
+        color: $white;
+        font-weight: 500;
+        color: $white;
+      }
+    }
+
+    &:hover::before {
+      opacity: 0.1;
+    }
+
+    &:hover {
+      .destination_item_title {
+        background-color: $primary_color;
+      }
+    }
+  }
+}

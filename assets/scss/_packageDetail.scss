@@ -1,0 +1,371 @@
+.breadcrum {
+  color: $white;
+  .trip_brief {
+    &_icon {
+      border: 2px solid $white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+
+      i {
+        font-size: 28px;
+        color: $primary_color;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    strong {
+      font-size: 18px;
+    }
+  }
+}
+
+.package_detail {
+  padding: 50px 0;
+  scroll-behavior: smooth;
+
+  &_nav {
+    position: sticky;
+    top: 0;
+  }
+
+  h1,
+  h4 {
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-bottom: 1em;
+    color: $slider_dot_color;
+  }
+  .overview {
+    margin-bottom: 50px;
+  }
+}
+.itinerary_wrapper {
+  margin-bottom: 50px;
+
+  .itinerary {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+
+    &_day {
+      grid-column: span 1;
+      background-color: $primary_color;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+
+      span {
+        display: block;
+        color: $white;
+
+        &:not(:last-child) {
+          font-size: 28px;
+          font-weight: 800;
+        }
+      }
+    }
+    &_day_detail {
+      grid-column: span 4;
+    }
+  }
+}
+.package_detail_nav {
+  overflow: hidden;
+
+  li {
+    line-height: 2;
+    position: relative;
+
+    &.active {
+      color: $primary_color;
+
+      &::before {
+        content: "";
+        background-color: $primary_color;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        right: -10px;
+      }
+    }
+    a {
+      @include transition-ease;
+
+      &:hover {
+        color: $primary_color;
+      }
+    }
+  }
+}
+.review_wrapper {
+  margin-bottom: 50px;
+  .review {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    .reviewer_detail {
+      grid-column: span 1;
+      text-align: center;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      span {
+        display: block;
+
+        &.country {
+          color: $primary_color;
+          font-weight: 800;
+          font-size: 18px;
+        }
+      }
+    }
+    &_message {
+      grid-column: span 4;
+    }
+  }
+}
+
+.aside {
+  .fact_wrapper {
+    background-color: $nav_background_color;
+    color: $white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    h3 {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      li {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        i {
+          font-size: 22px;
+        }
+
+        .fact_info {
+          grid-column: span 4;
+        }
+      }
+    }
+  }
+
+  .trip_btns {
+    a {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 18px;
+      color: $white;
+      text-align: center;
+      border-radius: 5px;
+      padding: 8px;
+
+      &:first-child {
+        background-color: $secondary_color;
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        background-color: $primary_color;
+      }
+    }
+  }
+
+  .route_map {
+    margin: 50px 0;
+
+    a {
+      position: relative;
+      display: inline-block;
+
+      img {
+        width: 100%;
+        // height: 300px;
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #222;
+        opacity: 0.5;
+        border-radius: 5px;
+      }
+
+      h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary_color;
+      }
+    }
+  }
+
+  .related {
+    h3 {
+      margin-bottom: 0.2em;
+    }
+  }
+  .hot_deal {
+    @extend .related;
+    margin-top: 40px;
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .aside {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    .fact_wrapper,
+    .route_map {
+      grid-column: span 2;
+      margin: 0;
+    }
+    .related,
+    .hot_deal {
+      grid-column: span 4;
+
+      .related_package,
+      .hot_deal_wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+    }
+    .trip_btns {
+      grid-column: span 4;
+      text-align: center;
+
+      grid-row: 1;
+      .full_width_btn {
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aside {
+    .fact_wrapper,
+    .route_map {
+      grid-column: span 4;
+
+      button {
+        width: 100%;
+
+        img {
+          max-height: 200px;
+        }
+      }
+    }
+    .related,
+    .hot_deal {
+      .related_package,
+      .hot_deal_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .package_detail {
+    &_nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    li.active {
+      &::before {
+        background-color: transparent;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .aside {
+    .related,
+    .hot_deal {
+      .related_package,
+      .hot_deal_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+// Trip Enquiry Form Popup
+.trip_enquiry {
+  max-width: 350px;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  background-color: $white;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  .enquiry_form {
+    padding: 15px;
+    position: relative;
+
+    button.close {
+      position: absolute;
+      top: -44px;
+      right: -148px;
+      background-color: transparent;
+      color: $primary_color;
+    }
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

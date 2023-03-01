@@ -1,0 +1,133 @@
+.trip_booking {
+  padding: 50px 0;
+
+  form {
+    background-color: $white;
+    // padding: 15px;
+    border-radius: 10px;
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    button {
+      background-color: $primary_color;
+      border-radius: 15px;
+      padding: 5px 30px;
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 15px;
+    }
+
+    .personal_info {
+      background-color: $nav_background_color;
+      color: $white;
+      border-radius: 10px 0 0 10px;
+      padding: 30px;
+
+      select {
+        color: $white;
+        background-color: $nav_background_color;
+      }
+      label {
+        color: $secondary_color;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $text-color1;
+        margin-top: 15px;
+        background-color: transparent;
+        outline: none;
+        color: $white;
+
+        &:focus {
+          border-color: $secondary_color;
+        }
+      }
+    }
+    .trip_info {
+      padding: 30px;
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $text-color1;
+        margin-top: 15px;
+        background-color: transparent;
+        outline: none;
+        color: $white;
+
+        &:focus {
+          border-color: $secondary_color;
+        }
+      }
+
+      h2 {
+        color: $primary_color;
+      }
+
+      input {
+        color: #000;
+      }
+      input[placeholder] {
+        color: $slider_dot_color;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Payment Form
+.payment_info {
+  padding: 30px;
+
+  h2 {
+    color: $primary_color;
+  }
+  h5 {
+    margin: 0;
+  }
+
+  .paying_percentage {
+    margin-bottom: 30px;
+    .note {
+      background-color: $primary_color;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 15px;
+
+      p {
+        color: $white;
+        font-size: 12px;
+
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .row {
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $text-color1;
+      background-color: transparent;
+      outline: none;
+      color: #000;
+      padding: 8px;
+
+      &:focus {
+        border-color: $secondary_color;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.testimonial {
+  background-color: $nav_background_color;
+  padding: 50px 0;
+  color: $white;
+
+  &_wrapper {
+    overflow: hidden;
+  }
+
+  &_details {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $white;
+    padding: 30px;
+    color: $text-color1;
+
+    .featured_image {
+      position: relative;
+
+      img {
+        max-width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      span.quote {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $primary_color;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::after {
+          content: "\201D";
+          font-size: 30px;
+          display: inline-block;
+        }
+      }
+    }
+
+    &_brief {
+      strong {
+        color: #000;
+      }
+      span {
+        color: $primary_color;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 0;
+
+    li {
+      background-color: $slider_dot_color;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      &.slick-active {
+        background-color: $primary_color;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .flex_section_title {
+    flex-direction: row !important;
+  }
+}
+
+.testimonial_page {
+  padding: 50px 0;
+
+  .review {
+    margin-bottom: 30px;
+
+    h4 {
+      text-transform: uppercase;
+    }
+
+    .profile {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    ul.ratings {
+      display: flex;
+      justify-content: center;
+      color: $primary_color;
+    }
+    .review_message {
+      p {
+        color: $slider_dot_color;
+      }
+      p.name {
+        color: #000;
+
+        span {
+          color: $primary_color;
+        }
+      }
+    }
+    .read_more_btn {
+      a {
+        color: $nav_background_color;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}

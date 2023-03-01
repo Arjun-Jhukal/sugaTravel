@@ -1,0 +1,106 @@
+.contact_page {
+  margin: 50px 0;
+
+  &_wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 30px;
+    background-color: $white;
+    // padding: 30px;
+    border-radius: 10px;
+  }
+
+  &_info {
+    grid-column: span 3;
+    background-color: $nav_background_color;
+    color: $white;
+    padding: 30px;
+    border-radius: 15px;
+
+    i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .mb_10 {
+      margin-bottom: 30px;
+    }
+
+    .contact_info_location {
+      li {
+        line-height: 1.8;
+      }
+      li:first-child {
+        font-weight: 500;
+      }
+    }
+    .contact_info_phone,
+    .contact_info_mail {
+      a:first-child {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 2px;
+          height: 15px;
+          background-color: $white;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .form_section {
+    grid-column: span 4;
+
+    .contact_form {
+      padding: 30px;
+
+      &_title {
+        margin-bottom: 15px;
+        h3 {
+          color: $primary_color;
+        }
+      }
+
+      label {
+        display: block;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $text-color1;
+        margin: 15px 0;
+
+        &[placeholder] {
+          color: $text-color1;
+          text-transform: capitalize;
+        }
+
+        &:focus {
+          border-color: $secondary_color;
+        }
+      }
+
+      .form_action {
+        button {
+          background-color: $primary_color;
+          color: $white;
+          font-weight: 600;
+          padding: 8px 30px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact_page {
+    &_info {
+      grid-column: span 7;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
